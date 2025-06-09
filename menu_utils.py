@@ -1,5 +1,5 @@
 from enum import IntEnum, auto
-from models_utils import *
+from train_utils import *
 import os
 from time import sleep
 
@@ -27,8 +27,8 @@ def handle_menu():
         # Gerencia o fluxo conforme a opção escolhida
         opt = int(input("Enter your choice number: "))
         match opt:
-            case MenuOption.TRAIN_MODELS: pass
-            case MenuOption.INFER: pass
+            case MenuOption.TRAIN_MODELS: train_models()
+            case MenuOption.INFER: pass # NÂO IMPLEMENTADO
             case MenuOption.EXIT: exit(0)
             case _:
                 print("\nInvalid option number. Try again")
